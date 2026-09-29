@@ -30,19 +30,19 @@ public class CardTrick {
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
-        Scanner k = new Scanner(System.in);
+        /*Scanner k = new Scanner(System.in);
         System.out.println("Enter a card value(1-13) : ");
         int userValue =  k.nextInt();
         System.out.println("Enter a suit (0-3 where 0=Hearts, 1=Diamonds, 2=Clubs, 3=Spades)");
         int userSuit = k.nextInt();
-        String userSuitNew= Card.SUITS[userSuit];
+        String userSuitNew= Card.SUITS[userSuit];*/
 
         Card luckyCard = new Card();
         luckyCard.setValue(7);
         luckyCard.setSuit("Diamonds");
           for(Card c : magicHand){
-            if(c.getValue()== userValue){
-                if(userSuitNew.equals(c.getSuit())){
+            if(luckyCard.getValue()== c.getValue()){
+                if(luckyCard.getSuit().equals(c.getSuit())){
                     System.out.println("Your card is in the magic hand");
                 }
                 else{
