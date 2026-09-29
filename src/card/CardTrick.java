@@ -36,7 +36,10 @@ public class CardTrick {
         System.out.println("Enter a suit (0-3 where 0=Hearts, 1=Diamonds, 2=Clubs, 3=Spades)");
         int userSuit = k.nextInt();
         String userSuitNew= Card.SUITS[userSuit];
-        
+
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Diamonds");
           for(Card c : magicHand){
             if(c.getValue()== userValue){
                 if(userSuitNew.equals(c.getSuit())){
